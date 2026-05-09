@@ -96,11 +96,36 @@ Build for production:
 npm run build
 ```
 
+Run the production static server locally after building:
+
+```bash
+npm run serve
+```
+
 Run lint checks:
 
 ```bash
 npm run lint
 ```
+
+## Deploying on Railway
+
+This project is ready to deploy from GitHub on Railway.
+
+1. Push the latest code to GitHub.
+2. Open Railway and create a new project.
+3. Choose **Deploy from GitHub repo**.
+4. Select `ShubhamKumar-S/DevPlus`.
+5. Let Railway deploy the service.
+6. After deployment, open the service **Settings** or **Networking** section and generate a public domain.
+
+Railway reads `railway.json` from the repository root. The config tells Railway to:
+
+- Build the app with `npm run build`
+- Start the production static server with `node server.js`
+- Healthcheck the app at `/`
+
+The server uses Railway's `PORT` environment variable automatically, so no manual port setup is needed.
 
 ## Dark Mode
 

@@ -3,11 +3,15 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "start": "vite",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
+    "serve": "node server.js",
     "preview": "vite preview"
   },
   "dependencies": {
